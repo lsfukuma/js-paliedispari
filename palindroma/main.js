@@ -2,32 +2,26 @@
 
 
 //chiedere una parola all'utente
-var parola = prompt('Inserisci una parola');
+var parola = prompt('Inserisci una parola' ,'elefante');
 
-var ogniCarattere = parola.split('');
-console.log(ogniCarattere);
+var parolaPalindroma = palindroma (parola); //parolaPalindroma  è il risultato di parolareverse
 
-var reverso = ogniCarattere.reverse();
-console.log(reverso);
-
-var stringa2 = reverso.join('');
-console.log(stringa2);
-
-var stringa1 = ogniCarattere.join('');
-console.log(stringa1);
-
-
-if (stringa1 = stringa2)  {
+if (parola == parolaPalindroma)  {
     console.log('La parola ' + parola + ' è palindroma')
+} else {
+    console.log('La parola non è palindroma');
 }
 
-
-
 //funzione
-//function palindroma (parola) {
-    //1. operacoes: primeiro passo - transformar a stringa em um array com os caracteres separados --> split?
-    // var ogniCarattere = parola.split('');
-    // console.log(ogniCarattere);
-    //2. alguma funcao que faca ler da direita para esquerda -- achar isso --> reverse!
+function palindroma (parola) {
+    var ogniCarattere = parola.split('');
+    console.log(ogniCarattere);
 
-    //3. SE sao iguais: palavra palindroma, se nao, xauu
+    var reverso = ogniCarattere.reverse();
+    console.log(reverso);
+
+    var parolareverse = reverso.join('');
+    console.log(parolareverse);
+
+    return parolareverse;
+}
