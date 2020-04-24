@@ -10,7 +10,7 @@ console.log('Numero random: ' + numberPc);
 
 //chiedere all'utente se sceglie pari o dispari
 var evenOdd = prompt('Pari o dispari?');
-console.log(evenOdd);
+console.log('Dispari o pari? ' + evenOdd);
 
 //sapere cosa l'utente ha messo: pari o dispari
 var userEven = evenOdd == 'pari';
@@ -21,9 +21,13 @@ var userOdd = evenOdd == 'dispari'
 var somma = numberUser + numberPc
 console.log(somma);
 
-if (somma % 2 == 0) {
-    console.log('numero pari');
+//somma
+if ((somma % 2 == 0) && (userEven == true)) {
+    console.log('Hai vinto!');
+}
+else if ((somma % 2 == 1) && (userOdd== true)){
+    console.log('Hai vinto');
 }
 else {
-    console.log('numero dispari');
+    console.log('Hai perso');
 }
