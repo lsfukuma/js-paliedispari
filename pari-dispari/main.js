@@ -12,22 +12,30 @@ console.log('Numero random: ' + numberPc);
 var evenOdd = prompt('Pari o dispari?');
 console.log('Dispari o pari? ' + evenOdd);
 
+//funzione per sommare i numeri scelti
+function pariodispari(numberUser , evenOdd) {
+//fare la somma  dei due numeri
+var sommaNumbers = numberUser + numberPc ;
+console.log(sommaNumbers);
+
+return sommaNumbers ;
+
+}
+
+//somma
+var somma = pariodispari (numberUser , evenOdd);
+
 //sapere cosa l'utente ha messo: pari o dispari
 var userEven = evenOdd == 'pari';
 console.log(userEven);
-var userOdd = evenOdd == 'dispari'
+var userOdd = evenOdd == 'dispari';
 
-//fare la somma  dei due numeri
-var somma = numberUser + numberPc
-console.log(somma);
-
-//somma
 if ((somma % 2 == 0) && (userEven == true)) {
     console.log('Hai vinto!');
 }
-else if ((somma % 2 == 1) && (userOdd== true)){
-    console.log('Hai vinto');
+else if ((somma % 2 == 1) && (userOdd == true)){
+    console.log('Hai vinto!');
 }
 else {
-    console.log('Hai perso');
+    console.log('Hai perso!');
 }
